@@ -19,6 +19,7 @@ public class PrimerHilo extends Thread {
         this.x = x;
     }
 
+    @Override
     public void run() {
         for (int i = 0; i < x; i++) {
             try {
