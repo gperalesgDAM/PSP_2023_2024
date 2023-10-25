@@ -7,7 +7,7 @@ public class EjemploHiloDeadInterrupted extends Thread {
     @Override
     public void run() {
         while (!Thread.currentThread().isInterrupted()) {
-            System.out.println("En el Hilo");
+           // System.out.println("En el Hilo");
             c++;
         }
     }

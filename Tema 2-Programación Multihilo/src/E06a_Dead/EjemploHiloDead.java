@@ -13,7 +13,7 @@ public class EjemploHiloDead extends Thread {
     @Override
     public void run() {
         while (!stopHilo) {
-            System.out.println("En el Hilo");
+          //  System.out.println("En el Hilo");
             c++;
         }
     }
