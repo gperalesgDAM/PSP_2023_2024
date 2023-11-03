@@ -24,7 +24,7 @@ public class Prioridades {
         System.out.println("Estado tras arrancar el hilo: " + afterStart);
 
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt(); // Restaura la bandera de interrupción
         }
