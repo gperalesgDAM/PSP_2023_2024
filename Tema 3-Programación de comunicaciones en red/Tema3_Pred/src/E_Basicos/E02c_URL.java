@@ -41,6 +41,7 @@ public class E02c_URL {
             System.out.println("Protocol: " + uri.getScheme());
             System.out.println("Host Name: " + uri.getHost());
             System.out.println("Port Number: " + uri.getPort());
+            System.out.println("Default Port Number: URI no tiene metodo equivalente para obtener puerto por defecto");
             System.out.println("Query String: " + uri.getQuery());
             System.out.println("Path: " + uri.getPath());
             System.out.println("File: " + uri.getPath()); // En URI, getFile() devuelve la parte del path y no del path completo

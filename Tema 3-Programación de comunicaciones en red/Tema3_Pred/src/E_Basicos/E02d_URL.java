@@ -21,13 +21,16 @@ public class E02d_URL {
         try {
             // creamos el objeto url
             URL url = new URL("https://es.wikipedia.org");
+
             // abrimos un reader que lee directamente de la url y lo envolvemos en un buffered reader para leerlo linea a linea
             BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
             // recorremos el reader y lo mostramos por consola
             String line;
             //Esto continúa hasta que no hay más líneas para leer (cuando readLine() devuelve null).
             while ((line = in.readLine()) != null) {
-                System.out.println(line);
+             //   if (line.contains("charset")) {
+                    System.out.println(line);
+             //   }
             }
             in.close();
 

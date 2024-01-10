@@ -2,7 +2,6 @@ package E_Basicos;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URI;
 
 public class E02a_URL {
 	
@@ -11,14 +10,25 @@ public static void main (String[] args) {
 		URL url;
 		try {
 			
-			System.out.println("Constructor simple para una URL");
-			url = new URL ("http://developer.oracle.com");
-			visualizar(url);
-			
-			System.out.println("Constructor para protocolo + URL  + directorio");
-			url = new URL ("http","developer.oracle.com", "/devo/java");
-			visualizar(url);
-			
+                    System.out.println("Constructor simple para una URL");
+                    url = new URL("http://developer.oracle.com");
+                    visualizar(url);
+
+                    System.out.println("Constructor para protocolo + URL  + directorio");
+                    url = new URL("http", "developer.oracle.com", "/devo/java");
+                    visualizar(url);
+                    System.out.println("Constructor simple con URL con Query");
+                    url = new URL("https://www.decathlon.es/es/p/bota-de-esqui-alpino-freeride-travesia-mujer-wedze-fr-500-flex-90-lowtech/_/R-p-308562?mc=8563589");
+                    visualizar(url);
+                    System.out.println("Constructor simple con URL con Port");
+                    url = new URL("https://www.decathlon.es:443");
+                    visualizar(url);
+                    
+                    System.out.println("Constructor simple con URL mal formada");
+                    url = new URL("ww.decathlon.es:443");
+                    visualizar(url);
+                        
+                        
 		} catch (MalformedURLException e) {
 			System.out.println (e);
 		}
