@@ -1,10 +1,10 @@
-package Ejem08_UDP_Object;
+package Actividad8;
 
 import java.io.Serializable;
 
 public class Persona implements Serializable {
-	private String nombre;
-	private int edad;
+	String nombre;
+	int edad;
 
 	public Persona(String nombre, int edad) {
 		super();
