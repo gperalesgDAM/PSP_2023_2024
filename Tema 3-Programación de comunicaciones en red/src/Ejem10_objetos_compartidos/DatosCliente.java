@@ -1,22 +1,22 @@
-package Ejem10_Objetos_compartidos;
+package Ejem10_objetos_compartidos;
 
 import java.io.*;
 
-public class Datos implements Serializable {
+public class DatosCliente implements Serializable {
 		String cadena; //cadena que intercambia con el servidor
 		int intentos; //intentos que lleva el jugador, hasta 5
 		int identificador; //id del jugador
 		boolean gana; //true si el jugador adivina el número
 		boolean juega; //true si el jugador juega, false juego finalizado
 
-	public Datos (String cadena, int intentos, int identificador) {
+	public DatosCliente (String cadena, int intentos, int identificador) {
 		this.cadena = cadena;
 		this.intentos = intentos;
 		this.identificador = identificador;
 		this.gana = false;
 		this.juega = true;
 	}
-	public Datos() {
+	public DatosCliente() {
 		super();
 	}
 	
