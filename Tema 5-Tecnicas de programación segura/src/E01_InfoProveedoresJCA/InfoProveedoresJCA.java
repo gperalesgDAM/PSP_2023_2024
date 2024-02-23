@@ -4,7 +4,6 @@
  */
 package E01_InfoProveedoresJCA;
 
-import java.security.MessageDigest;
 import java.security.Provider;
 import java.security.Security;
 import java.util.Enumeration;
@@ -13,6 +12,9 @@ import java.util.Set;
 /**
  *
  * @author guipe
+ Las propiedades del proveedor se refieren a configuraciones y detalles específicos del proveedor de seguridad
+Cada proveedor de seguridad en Java puede proporcionar implementaciones para varios algoritmos criptográficos, 
+protocolos de seguridad, generadores de números aleatorios, entre otros servicios relacionados con la seguridad.
  */
 class InfoProveedoresJCA {
 
@@ -29,10 +31,15 @@ class InfoProveedoresJCA {
             System.out.println("Núm. proveedor : " + (i + 1));
             System.out.println("Nombre         : " + proveedor.getName());
             System.out.println("Versión        : " + proveedor.getVersion());
-            System.out.println("Información    :\n  " + proveedor.getInfo());
-            System.out.println("Servicios    :");
-   
+            System.out.println("Información    : " + proveedor.getInfo());
+            System.out.println("Servicios    :\n");
+            Set<Provider.Service> servicios = proveedor.getServices();
+            for (Provider.Service servicio : servicios) {
+                //Se filtran los servicios por el tipo
+                System.out.println("El algoritmo " + servicio.getAlgorithm() + " es de tipo " + servicio.getType());
+            }
             System.out.println("Propiedades    :");
+            i++;
             if (listarProps) {
                 Enumeration propiedades = proveedor.propertyNames();
                 while (propiedades.hasMoreElements()) {

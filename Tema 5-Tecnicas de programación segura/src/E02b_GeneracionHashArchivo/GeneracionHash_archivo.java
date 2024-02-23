@@ -23,7 +23,7 @@ public class GeneracionHash_archivo {
             md.update(bytes);
             byte[] hash = md.digest();
 
-            System.out.printf("Hash del archivo: [%s]\n", valorHexadecimal(hash));
+            System.out.printf("Hash del archivo: [%s]\n", valorHexadecimal2(hash));
             System.out.println("");
         } catch (NoSuchAlgorithmException e) { //Excepción al intentar utilizar el algoritmo de hash
             System.out.println("No disponible algoritmo de hash");
@@ -32,12 +32,12 @@ public class GeneracionHash_archivo {
     }
 //Toma un array de bytes como entrada y devuelve una representación hexadecimal de esos bytes en forma de cadena de caracteres
 
-    static String valorHexadecimal(byte[] bytes) {
-        String result = "";
+    static String valorHexadecimal2(byte[] bytes) {
+        StringBuilder result = new StringBuilder();    
         for (byte b : bytes) {
-            result += String.format(String.format("%x", b));
+            result.append(String.format("%02x", b)); //asegurar que cada byte se represente con dos caracteres hexadecimales
         }
-        return result;
+        return result.toString();
     }
 
 
