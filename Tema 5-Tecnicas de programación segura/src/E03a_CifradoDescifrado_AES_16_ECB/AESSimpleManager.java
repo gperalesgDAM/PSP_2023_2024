@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package E03a_CifradoDescifrado_AES_16;
+package E03a_CifradoDescifrado_AES_16_ECB;
 
 
 import java.security.Key;
@@ -18,8 +18,10 @@ public class AESSimpleManager {
 
     public static Key obtenerClave(String password, int longitud) {
         //La longitud puede ser de 16, 24,o 32 bytes para construir claves AES-128, AES-192 o AES-256, respectivamente. 
+        
         Key clave = new SecretKeySpec(password.getBytes(), 0, longitud, "AES");
         //Offset: Es el índice en el array de bytes desde donde comenzará a construir la clave
+        //SecretKeySpec: se utiliza para construir objetos de clave secretas a partir de bytes que representan una clave en bruto
         return clave;
     }
 

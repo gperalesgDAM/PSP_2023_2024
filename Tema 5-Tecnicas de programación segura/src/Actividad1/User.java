@@ -12,13 +12,11 @@ package Actividad1;
         private final String nombre;
         private final byte[] hashContraseña;
         private final byte[] salt;
-        private final String hashContraseñaString;
 
-        public User(String nombre,byte[] hashContraseña, byte[] salt,String hashContraseñaString) {
+        public User(String nombre,byte[] hashContraseña, byte[] salt) {
             this.hashContraseña = hashContraseña;
             this.salt = salt;
             this.nombre=nombre;
-            this.hashContraseñaString=hashContraseñaString;
         }
 
     public String getNombre() {
@@ -29,9 +27,6 @@ package Actividad1;
         return hashContraseña;
     }
 
-    public String getHashContraseñaString() {
-        return hashContraseñaString;
-    }
 
     public byte[] getSalt() {
         return salt;

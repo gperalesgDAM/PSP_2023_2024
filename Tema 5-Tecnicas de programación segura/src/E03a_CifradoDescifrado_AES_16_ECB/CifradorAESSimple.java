@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package E03a_CifradoDescifrado_AES_16;
+package E03a_CifradoDescifrado_AES_16_ECB;
 
 
 import java.io.PrintWriter;
@@ -19,7 +19,7 @@ public class CifradorAESSimple {
 
         final String NOMBRE_FICHERO = "./archivos/mensaje_cifrado.txt";
         final String PASSWORD = "0123456789124567";
-        final String TEXTO_EN_CLARO = "La clave secreta de la caja fuerte es 3842873110";
+        final String TEXTO_EN_CLARO = "La clave secreta de las caja fuerte es 3842873110";
         final int LONGITUD = 16; //Expresado en bytes 
         try {
 
