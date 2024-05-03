@@ -43,7 +43,7 @@ public class E01_CrearCarpetaArchivo {
             if (archivo.createNewFile()) {
                 System.out.println("Archivo creado correctamnte");
             } else {
-                System.out.println("Error al crear el archivo");
+                System.out.println("El archivo ya existe");
             }
         } catch (IOException ex) {
             Logger.getLogger(E01_CrearCarpetaArchivo.class.getName()).log(Level.SEVERE, null, ex);

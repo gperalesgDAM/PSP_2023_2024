@@ -15,9 +15,7 @@ public class E05_Guardar_Fichero {
       File fErr = new File("error.txt");
       pb.redirectOutput(fOut);
       pb.redirectError(fErr);
-      File directorio2 = new File(".\\archivos");
       pb.start();
       System.out.println(directorio.getAbsolutePath());
-      System.out.println(directorio2.getAbsolutePath());
    }
 }

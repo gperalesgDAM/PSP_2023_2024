@@ -22,10 +22,10 @@ public class E00_Lanzador {
             ProcessBuilder pb = new ProcessBuilder("java", "ejercicios.E00_Sumador");
             pb.directory(directorio);
 
-            //pb.redirectInput(ProcessBuilder.Redirect.INHERIT);
-            //pb.redirectOutput(ProcessBuilder.Redirect.INHERIT);
+            pb.redirectInput(ProcessBuilder.Redirect.INHERIT);
+            pb.redirectOutput(ProcessBuilder.Redirect.INHERIT);
             
-            pb.inheritIO();
+            //pb.inheritIO();
 
             // Iniciar el proceso
             Process proceso = pb.start();
